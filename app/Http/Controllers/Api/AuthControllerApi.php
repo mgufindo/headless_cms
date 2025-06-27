@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class AuthControllerApi extends Controller
 {
@@ -21,17 +22,23 @@ class AuthControllerApi extends Controller
         if (is_null(($user))) {
             return ApiResponse::error('User not found', 404);
         }
+
+        if (!Hash::check($request->password, $user->password)) {
+            return ApiResponse::error('Invalid credentials', 401);
+        }
+
         $token = $this->token();
 
         // Simpan token di Redis dengan expiry time (contoh: 1 jam)
         Redis::setex($token, 3600 * 7, json_encode([
-            'user_id' => $user->id,
             'email' => $user->email,
             'issued_at' => now()->toDateTimeString(),
+            'permissions' => $user->roles[0]->permissions
         ]));
 
         $data = [
-            'user' => $user,
+            'email' => $user->email,
+            'permissions' => $user->roles[0]->permissions,
             'token' => $token
         ];
         return ApiResponse::success($data);

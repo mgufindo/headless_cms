@@ -15,6 +15,7 @@ class Category extends Model
     public $incrementing = false;
     public $fillable = ['name', 'slug'];
     protected $dates = ['deleted_at'];
+    public $hidden = ['pivot'];
 
     protected static function boot()
     {

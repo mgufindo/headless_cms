@@ -10,6 +10,7 @@ class Permission extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'description'];
+    protected $hidden = ['pivot'];
 
     public function roles()
     {
