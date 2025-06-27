@@ -126,6 +126,75 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"9f3ef3de-ecbf-42df-8955-cf777f4f6799\",\n            \"name\": \"testing\",\n            \"email\": \"test@gmail.com\",\n            \"email_verified_at\": null,\n            \"two_factor_confirmed_at\": null,\n            \"current_team_id\": null,\n            \"profile_photo_path\": null,\n            \"created_at\": \"2025-06-26T08:41:22.000000Z\",\n            \"updated_at\": \"2025-06-26T08:41:22.000000Z\",\n            \"profile_photo_url\": \"https://ui-avatars.com/api/?name=t&color=7F9CF5&background=EBF4FF\"\n        },\n        \"token\": \"b9bd089b2e4e5dca3849a8d327d8c4a601f9c352e09844c1f9181585676101f5\"\n    }\n}"
+						},
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.32"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Jun 2025 14:34:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"email\": \"admin@example.com\",\n        \"permissions\": [\n            {\n                \"id\": 10,\n                \"name\": \"create_categories\",\n                \"description\": \"Create categories\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"create_pages\",\n                \"description\": \"Create pages\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"create_posts\",\n                \"description\": \"Create posts\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 17,\n                \"name\": \"create_users\",\n                \"description\": \"Create users\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"delete_categories\",\n                \"description\": \"Delete categories\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"delete_pages\",\n                \"description\": \"Delete pages\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"delete_posts\",\n                \"description\": \"Delete posts\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 19,\n                \"name\": \"delete_users\",\n                \"description\": \"Delete users\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 11,\n                \"name\": \"edit_categories\",\n                \"description\": \"Edit categories\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"name\": \"edit_pages\",\n                \"description\": \"Edit pages\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"edit_posts\",\n                \"description\": \"Edit posts\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 18,\n                \"name\": \"edit_users\",\n                \"description\": \"Edit users\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"manage_permissions\",\n                \"description\": \"Manage permissions\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"manage_roles\",\n                \"description\": \"Manage roles\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 13,\n                \"name\": \"manage_users\",\n                \"description\": \"Manage users\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"view_categories\",\n                \"description\": \"View categories\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"view_pages\",\n                \"description\": \"View pages\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 1,\n                \"name\": \"view_posts\",\n                \"description\": \"View posts\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            },\n            {\n                \"id\": 16,\n                \"name\": \"view_users\",\n                \"description\": \"View users\",\n                \"created_at\": \"2025-06-27T14:32:04.000000Z\",\n                \"updated_at\": \"2025-06-27T14:32:04.000000Z\"\n            }\n        ],\n        \"token\": \"88c913898a89bc7b95fafa7c1a0d7afcfcc0ebb6acc567fa2d391714120626ad\"\n    }\n}"
 						}
 					]
 				},
