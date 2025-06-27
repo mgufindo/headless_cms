@@ -94,6 +94,6 @@ Before you begin, ensure you have the following installed:
     -   **Password:** `password`
 
 11. **Postman Collection**
-    For API testing, import the **Postman collection** found within the `cms` folder of this project.
+    For API testing, import the **Postman collection** found within the `cms` folder of this project. The base URL for Postman should be `http://127.0.0.1:8000`.
 
 ---
