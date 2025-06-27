@@ -15,7 +15,7 @@ use App\Livewire\Dashboard;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+Route::middleware(['web', 'auth:sanctum'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/', Dashboard::class)->name('home');
 });
