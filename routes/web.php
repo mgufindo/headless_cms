@@ -3,6 +3,11 @@
 use App\Http\Controllers\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Dashboard;
+use App\Livewire\Role\RoleList;
+use App\Livewire\Role\EditPermissions;
+use App\Livewire\User\Index as UserIndex;
+use App\Livewire\User\Create as UserCreate;
+use App\Livewire\User\Edit as UserEdit;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +20,7 @@ use App\Livewire\Dashboard;
 |
 */
 
+// Route::get('/login', LoginForm::class)->name('login');
 Route::middleware(['web', 'auth:sanctum'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/', Dashboard::class)->name('home');
@@ -37,4 +43,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/pages/{page}/edit', \App\Livewire\Page\Edit::class)->name('pages.edit');
     Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
+
+    Route::get('/', UserIndex::class)->name('users.index');
+    Route::get('/create', UserCreate::class)->name('users.create');
+    Route::get('/{user}/edit', UserEdit::class)->name('users.edit');
+    Route::get('/{user}/editx', UserEdit::class)->name('users.edit-roles');
+    Route::get('/role', RoleList::class)->name('roles.index');
+    Route::get('/{role}/role', EditPermissions::class)->name('roles.edit');
 });

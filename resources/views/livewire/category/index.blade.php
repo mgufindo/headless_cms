@@ -50,7 +50,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                             <a href="{{ route('categories.edit', $category->id) }}"
                                                 class="text-indigo-600 hover:text-indigo-900 mr-3">Edit</a>
-                                            <button wire:click="confirmDelete({{ $category->id }})"
+                                            <button wire:click="confirmDelete(@js($category->id))"
                                                 class="text-red-600 hover:text-red-900">
                                                 Hapus
                                             </button>

@@ -45,22 +45,45 @@
             </div>
             <ul class="space-y-2 font-medium">
                 <li>
-                    <a href="{{ route('posts.index') }}"
-                        class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
-                        <span class="ms-3">Posts</span>
-                    </a>
+                    @permission('view_posts')
+                        <a href="{{ route('posts.index') }}"
+                            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <span class="ms-3">Posts</span>
+                        </a>
+                    @endpermission
+                </li>
+
+                <li>
+                    @permission('view_categories')
+                        <a href="{{ route('categories.index') }}"
+                            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <span class="ms-3">Categories</span>
+                        </a>
+                    @endpermission
                 </li>
                 <li>
-                    <a href="{{ route('categories.index') }}"
-                        class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
-                        <span class="ms-3">Categories</span>
-                    </a>
+                    @permission('view_pages')
+                        <a href="{{ route('pages.index') }}"
+                            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <span class="ms-3">Pages</span>
+                        </a>
+                    @endpermission
                 </li>
                 <li>
-                    <a href="{{ route('pages.index') }}"
-                        class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
-                        <span class="ms-3">Pages</span>
-                    </a>
+                    @permission('view_users')
+                        <a href="{{ route('users.index') }}"
+                            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <span class="ms-3">Users</span>
+                        </a>
+                    @endpermission
+                </li>
+                <li>
+                    @permission('manage_permissions')
+                        <a href="{{ route('roles.index') }}"
+                            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <span class="ms-3">Role</span>
+                        </a>
+                    @endpermission
                 </li>
                 <li>
                     <a href="{{ route('logout') }}"
