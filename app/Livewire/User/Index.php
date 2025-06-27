@@ -20,7 +20,6 @@ class Index extends Component
     public $sortDirection = 'desc';
     public $selectedCategories = [];
     public $selectAll = false;
-    public $confirmingDelete = false;
     public $confirmChangeRoles = false;
     public $selectedRole;
     public $roleId;
@@ -52,33 +51,6 @@ class Index extends Component
         } else {
             $this->selectedCategories = [];
         }
-    }
-
-    public function confirmDelete($id = null)
-    {
-        if ($id) {
-            $this->selectedCategories = [$id];
-        }
-        $this->confirmingDelete = true;
-    }
-
-    public function deleteCategory()
-    {
-        $categories = Category::whereIn('id', $this->selectedCategories)->first();
-
-        $categories->delete();
-
-        $this->selectedCategories = [];
-        $this->selectAll = false;
-        $this->confirmingDelete = false;
-
-        session()->flash('message', 'Categories deleted successfully.');
-        $this->dispatch('refreshCategories');
-    }
-
-    public function updatingSearch()
-    {
-        $this->resetPage();
     }
 
     public function changeRoles($roleId)
