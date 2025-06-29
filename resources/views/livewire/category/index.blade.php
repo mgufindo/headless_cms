@@ -5,10 +5,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="flex justify-between items-center mb-6">
-                        <h2 class="text-2xl font-bold text-gray-800">Daftar Kategori</h2>
+                        <h2 class="text-2xl font-bold text-gray-800">List Category</h2>
                         <a href="{{ route('categories.create') }}"
                             class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-150">
-                            Tambah Kategori
+                            Add Category
                         </a>
                     </div>
 
@@ -34,7 +34,7 @@
                                     </th>
                                     <th scope="col"
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Aksi
+                                        Action
                                     </th>
                                 </tr>
                             </thead>
@@ -49,17 +49,17 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                             <a href="{{ route('categories.edit', $category->id) }}"
-                                                class="text-indigo-600 hover:text-indigo-900 mr-3">Edit</a>
+                                                class="text-indigo-600 hover:text-indigo-900 mr-3">Update</a>
                                             <button wire:click="confirmDelete(@js($category->id))"
                                                 class="text-red-600 hover:text-red-900">
-                                                Hapus
+                                                Delete
                                             </button>
                                         </td>
                                     </tr>
                                 @empty
                                     <tr>
                                         <td colspan="3" class="px-6 py-4 text-center text-sm text-gray-500">
-                                            Tidak ada data kategori
+                                            No category found
                                         </td>
                                     </tr>
                                 @endforelse
@@ -85,11 +85,11 @@
                 <div class="flex justify-end space-x-3">
                     <button wire:click="$set('confirmingDelete', false)"
                         class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                        Batal
+                        Cancel
                     </button>
                     <button wire:click="deleteCategory"
                         class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-                        Hapus
+                        Delete
                     </button>
                 </div>
             </div>

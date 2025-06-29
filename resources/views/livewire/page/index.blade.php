@@ -100,11 +100,11 @@
                 <div class="flex justify-end space-x-3">
                     <button wire:click="$set('confirmingDelete', false)"
                         class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                        Batal
+                        Cancel
                     </button>
                     <button wire:click="deleteCategory"
                         class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-                        Hapus
+                        Delete
                     </button>
                 </div>
             </div>
