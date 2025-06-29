@@ -41,7 +41,7 @@
                             {{ $post->published_at != null ? date('d-m-Y H:i', strtotime($post->published_at)) : '-' }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <img src="{{ asset('storage/' . $post->image) }}" alt="" class="w-[10rem]">
+                            <img src="{{ asset('storage/' . $post->image) }}" alt="" class="w-[4rem]">
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                             <a href="{{ route('posts.edit', $post) }}"

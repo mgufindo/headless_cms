@@ -59,7 +59,13 @@ Before you begin, ensure you have the following installed:
     php artisan key:generate
     ```
 
-7.  **Run Migrations**
+7.  **Generate Storage Link To Public Folder**
+
+    ```bash
+    php artisan storage:link
+    ```
+
+8.  **Run Migrations**
 
     ```bash
     php artisan migrate
@@ -67,7 +73,7 @@ Before you begin, ensure you have the following installed:
 
     If your database doesn't exist yet, you'll be prompted to create it. Type `yes` and press Enter.
 
-8.  **Seed Database for RBAC**
+9.  **Seed Database for RBAC**
     This step inserts the necessary permissions for Role-Based Access Control (RBAC):
     ```bash
     php artisan migrate --seed
@@ -77,8 +83,10 @@ Before you begin, ensure you have the following installed:
 
 ## Running Locally
 
-9.  **Start Development Servers**
+10. **Start Development Servers**
     To run the application locally, execute both commands simultaneously:
+
+
     ```bash
     npm run dev & php artisan serve
     ```
@@ -87,13 +95,13 @@ Before you begin, ensure you have the following installed:
 
 ## Accessing the Application
 
-10. **Login Credentials**
+11. **Login Credentials**
     Once the application is running, you can log in using these default credentials:
 
     -   **Username:** `admin@example.com`
     -   **Password:** `password`
 
-11. **Postman Collection**
+12. **Postman Collection**
     For API testing, import the **Postman collection** found within the `cms` folder of this project. The base URL for Postman should be `http://127.0.0.1:8000`.
 
 ---

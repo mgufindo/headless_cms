@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class Edit extends Component
 {
@@ -35,7 +36,7 @@ class Edit extends Component
         'image' => 'nullable|image|max:2048',
         'status' => 'required|in:draft,published',
         'published_at' => 'nullable|date',
-        'selectedCategories' => 'array',
+        'selectedCategories' => 'required|array|min:1',
     ];
 
     public function mount($post)
@@ -79,7 +80,7 @@ class Edit extends Component
         ];
 
         if ($this->image) {
-            // Delete old image if exists
+
             if ($post->image) {
                 Storage::disk('public')->delete($post->image);
             }

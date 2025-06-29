@@ -33,7 +33,7 @@ class Create extends Component
         'image' => 'nullable|image|max:2048',
         'status' => 'required|in:draft,published',
         'published_at' => 'nullable|date',
-        'selectedCategories' => 'array',
+        'selectedCategories' => 'required|array|min:1',
     ];
 
 
