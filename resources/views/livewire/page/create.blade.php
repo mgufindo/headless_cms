@@ -68,11 +68,11 @@
                     <div class="flex items-center justify-end space-x-3">
                         <a href="{{ route('categories.index') }}"
                             class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                            Batal
+                            Cancel
                         </a>
                         <button type="submit"
                             class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Simpan
+                            Save
                         </button>
                     </div>
                 </form>
